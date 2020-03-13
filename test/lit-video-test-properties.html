@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>prism-markdown-element test</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/wct-browser-legacy/browser.js"></script>
+
+    <script type="module" src="../lit-video.js"></script>
+  </head>
+  <body>
+
+    <test-fixture id="litVideo">
+      <template>
+        <lit-video></lit-video>
+      </template>
+    </test-fixture>
+
+
+    <script type="module">
+
+      suite('lit video Properties test suite', () => {
+
+        var litVideo;
+
+        setup(function setupSuite(){
+          litVideo = fixture('litVideo');
+        });
+
+          test('element should have src property', () => {
+            expect(litVideo).to.have.property('src');
+            expect(litVideo.src).to.be.a('String');
+          });
+
+          test('element should have option property', () => {
+            expect(litVideo).to.have.property('option');
+            expect(litVideo.option).to.be.a('String');
+          });
+
+          test('element should have type property', () => {
+            expect(litVideo).to.have.property('type');
+            expect(litVideo.type).to.be.a('String');
+          });
+
+          test('element should have txtError property', () => {
+            expect(litVideo).to.have.property('txtError');
+            expect(litVideo.txtError).to.be.a('String');
+          });
+
+          test('element should have formats property', () => {
+            expect(litVideo).to.have.property('formats');
+            expect(litVideo.formats).to.be.a('Array');
+          });
+
+          test('element should have poster property', () => {
+            expect(litVideo).to.have.property('poster');
+            expect(litVideo.poster).to.be.a('String');
+          });
+
+          test('element should have intervalReproduction property', () => {
+            expect(litVideo).to.have.property('intervalReproduction');
+            expect(litVideo.intervalReproduction).to.be.a('String');
+          });
+        
+          test('element should have track property', () => {
+            expect(litVideo).to.have.property('track');
+            expect(litVideo.track).to.be.a('Object');
+          });
+
+          test('element should have autoplay property', () => {
+            expect(litVideo).to.have.property('autoplay');
+            expect(litVideo.autoplay).to.be.a('Boolean');
+          });
+  
+    
+
+      });
+    </script>
+
+  </body>
+</html>

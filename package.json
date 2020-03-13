@@ -1,0 +1,37 @@
+{
+  "name": "lit-video",
+  "version": "1.0.0",
+  "description": "A lit element that render a responsive video",
+  "main": "lit-video.js",
+  "directories": {
+    "test": "test"
+  },
+  "author": "yhoshua ochoa",
+  "license": "MIT",
+  "dependencies": {
+    "lit-element": "2.2.1"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "3.0.0-pre.19",
+    "@webcomponents/webcomponentsjs": "2.0.0",
+    "wct-browser-legacy": "1.0.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhoshua8a/lit-video.git"
+  },
+  "keywords": [
+    "Video",
+    "webcomponents",
+    "LitElement",
+    "responsive video",
+    "multi video"
+  ],
+  "bugs": {
+    "url": "https://github.com/yhoshua8a/lit-video/issues"
+  },
+  "homepage": "https://github.com/yhoshua8a/lit-video#readme"
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>lit-example demo</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <script type="module">
+      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+      import '@polymer/iron-demo-helpers/demo-snippet';
+    </script>
+
+    <script type="module" src="../lit-video.js"></script>
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Simple lit-video demo</h3>
+      <demo-snippet>
+        <template>
+  
+      <lit-video 
+          id="first-video" 
+          track='{
+          "src":"subtitles-en.vtt",
+          "label":"English captions",
+          "kind":"captions",
+          "srclang":"en"
+          }' 
+          intervalreproduction="#t=5,10" 
+          option="simple" 
+          src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" 
+          type="video/webm" 
+          txterror="Tu navegador no es compatible con el elemento de video.">
+      </lit-video>
+
+      <button onclick="pause()">Pause first video</button>
+      <button onclick="play()">Play first video</button>
+      <button onclick="load()">Load first video</button>
+
+      <script>
+        function pause() {
+            document.querySelector("#first-video")._pause();
+        }
+
+        function play() {
+            document.querySelector("#first-video")._play();
+        }
+
+        function load() {
+            document.querySelector("#first-video")._load();
+        }
+    </script>
+        </template>
+      </demo-snippet>
+
+      <h3>Complex lit-video demo</h3>
+      <demo-snippet>
+        <template>
+          <lit-video 
+          option="complex" 
+          txterror="Tu navegador no es compatible con el elemento de video." 
+          formats='[
+          {"src":"https://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm",
+           "type":"video/webm"
+         },
+         {
+             "src":"https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4",
+             "type":"video/mp4"
+         }
+          ]' 
+          track='{
+             "src":"subtitles-es.vtt",
+             "label":"Spanish captions",
+             "kind":"captions",
+             "srclang":"es"
+         }'>
+         </lit-video>
+        </template>
+      </demo-snippet>
+    </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>prism-markdown-element test</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/wct-browser-legacy/browser.js"></script>
+
+    <script type="module" src="../lit-video.js"></script>
+  </head>
+  <body>
+
+    <test-fixture id="litVideo">
+      <template>
+        <lit-video></lit-video>
+      </template>
+    </test-fixture>
+
+
+    <script type="module">
+
+      suite('lit video properties test', () => {
+
+        var litVideo;
+
+        setup(function setupSuite(){
+          litVideo = fixture('litVideo');
+        });
+
+        test('Component object initialized', () => {
+          expect(litVideo.shadowRoot).to.be.ok;
+        });
+
+        test('Component should be in the dom', () => {
+          expect(litVideo).not.to.be.undefined;
+        });
+      });
+
+       
+    </script>
+
+  </body>
+</html>
